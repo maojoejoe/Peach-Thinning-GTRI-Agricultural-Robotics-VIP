@@ -1,2 +1,2 @@
 # Peach-Disbudding-GTRI-Agricultural-Robotics-VIP-
-Research, conceptualize, design, fabricate and test a novel robot end-effector smart toolfor performing dis-budding for peaches.
+Research, conceptualize, design, fabricate and test a novel robot end-effector smart tool for performing dis-budding for peaches.
