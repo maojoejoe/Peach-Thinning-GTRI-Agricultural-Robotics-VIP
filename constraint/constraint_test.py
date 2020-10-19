@@ -1,9 +1,10 @@
 from constrain import *
 import pandas as pd
 import random
+import time
 
 num_peaches = 15
-distance = 18
+distance = 12000
 max_size = 10
 
 # each peach is represented by a tuple that is (x, y, z, size)
@@ -41,6 +42,9 @@ d = {'X': x,
      'Remove': remove}
 peachlets = pd.DataFrame(data=d)
 
+start = time.time()
 picking = get_solution(peachlets)
+end = time.time()
 
+print('This run took {}'.format(end - start))
 print(picking)

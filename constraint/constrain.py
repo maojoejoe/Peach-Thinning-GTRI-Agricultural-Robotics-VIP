@@ -1,6 +1,6 @@
 import constraint
 import math
-import pandas as pd
+import numpy as np
 
 # this requires the constraint library.  It can be installed by using 'pip install python-constraint'
 
@@ -53,19 +53,11 @@ def get_solution(peaches):
     # get all the solutions
     solutions = problem.getSolutions()
 
-    # now find the solution with the largest mass of total kept peaches
-    largest = -1
-    best_solution = None
-    for solution in solutions:
-        size = 0
-        for i in solution:
-            if solution[i] == 1:
-                size += original_peaches.iloc[i]['Radius']
+    # pick the best solution
+    vals = (np.array([list(x.values()) for x in solutions]) * original_peaches['Radius'].values.reshape(1, -1)).sum(axis=1)
+    best_solution = solutions[vals.argmax()]
 
-        if size > largest:
-            best_solution = solution
-            largest = size
-
+    # create the array that has the ones to prune set to True
     answer = peaches.copy()
     prune = []
     for one in best_solution:
