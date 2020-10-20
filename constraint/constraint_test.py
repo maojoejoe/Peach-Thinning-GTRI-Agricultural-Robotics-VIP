@@ -4,7 +4,7 @@ import random
 import time
 
 num_peaches = 15
-distance = 12000
+distance = 1
 max_size = 10
 
 # each peach is represented by a tuple that is (x, y, z, size)

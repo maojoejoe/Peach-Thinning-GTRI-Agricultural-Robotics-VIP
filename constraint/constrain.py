@@ -4,7 +4,7 @@ import numpy as np
 
 # this requires the constraint library.  It can be installed by using 'pip install python-constraint'
 
-def get_solution(peaches):
+def get_solution(peaches, target_distance_apart=0.1524):
     '''
     This method will take a list of tuples representing the peaches and return a list of 1's and 0's representing
     keeping and pruning.  THe 1's show a peachlet will be kept and 0's indicate the need for pruning.
@@ -30,7 +30,7 @@ def get_solution(peaches):
             if args[i] == 1:
                 for j in range(i + 1, len(args)):
                     if args[j] == 1:
-                        if distances[i][j] < 6:
+                        if distances[i][j] < target_distance_apart:
                             # nope the two peachlets are too close
                             return None
 
@@ -67,7 +67,7 @@ def get_solution(peaches):
 
     return answer
 
-def get_solution_old(peaches):
+def get_solution_old(peaches, target_distance_apart=0.1524):
     '''
     This method will take a list of tuples representing the peaches and return a list of 1's and 0's representing
     keeping and pruning.  THe 1's show a peachlet will be kept and 0's indicate the need for pruning.
@@ -94,7 +94,7 @@ def get_solution_old(peaches):
             if args[i] == 1:
                 for j in range(i + 1, len(args)):
                     if args[j] == 1:
-                        if distances[i][j] < 6:
+                        if distances[i][j] < target_distance_apart:
                             # nope the two peachlets are too close
                             return None
 
