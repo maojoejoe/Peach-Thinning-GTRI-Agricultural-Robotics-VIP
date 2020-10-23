@@ -1,0 +1,176 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from move_base_msgs:action\MoveBase.idl
+// generated code does not contain a copyright notice
+#include "geometry_msgs/msg/dds_connext/PoseStamped_.idl"
+#include "builtin_interfaces/msg/dds_connext/Time_.idl"
+#include "unique_identifier_msgs/msg/dds_connext/UUID_.idl"
+
+#ifndef __move_base_msgs__action__move_base__idl__
+#define __move_base_msgs__action__move_base__idl__
+
+
+module move_base_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct MoveBase_Goal_ {
+geometry_msgs::msg::dds_::PoseStamped_ target_pose_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module move_base_msgs
+
+
+module move_base_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct MoveBase_SendGoal_Request_ {
+unique_identifier_msgs::msg::dds_::UUID_ goal_id_;
+move_base_msgs::action::dds_::MoveBase_Goal_ goal_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module move_base_msgs
+
+
+module move_base_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct MoveBase_SendGoal_Response_ {
+boolean accepted_;
+builtin_interfaces::msg::dds_::Time_ stamp_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module move_base_msgs
+
+
+module move_base_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct MoveBase_Result_ {
+octet structure_needs_at_least_one_member_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module move_base_msgs
+
+
+module move_base_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct MoveBase_GetResult_Request_ {
+unique_identifier_msgs::msg::dds_::UUID_ goal_id_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module move_base_msgs
+
+
+module move_base_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct MoveBase_GetResult_Response_ {
+octet status_;
+move_base_msgs::action::dds_::MoveBase_Result_ result_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module move_base_msgs
+
+
+module move_base_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct MoveBase_Feedback_ {
+geometry_msgs::msg::dds_::PoseStamped_ base_position_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module move_base_msgs
+
+
+module move_base_msgs {
+
+module action {
+
+module dds_ {
+
+
+struct MoveBase_FeedbackMessage_ {
+unique_identifier_msgs::msg::dds_::UUID_ goal_id_;
+move_base_msgs::action::dds_::MoveBase_Feedback_ feedback_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module move_base_msgs
+
+
+#endif  // __move_base_msgs__action__move_base__idl__
