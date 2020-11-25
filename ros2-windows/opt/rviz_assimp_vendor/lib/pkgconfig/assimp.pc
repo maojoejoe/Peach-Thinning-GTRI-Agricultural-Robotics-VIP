@@ -1,0 +1,11 @@
+prefix=C:/ci/ws/build/rviz_assimp_vendor/assimp_install
+exec_prefix=C:/ci/ws/build/rviz_assimp_vendor/assimp_install/
+libdir=C:/ci/ws/build/rviz_assimp_vendor/assimp_install/lib
+includedir=C:/ci/ws/build/rviz_assimp_vendor/assimp_install/include
+
+Name: Assimp
+Description: Import various well-known 3D model formats in an uniform manner.
+Version: 4.1.0
+Libs: -L${libdir} -lassimp
+Libs.private:  
+Cflags: -I${includedir}
